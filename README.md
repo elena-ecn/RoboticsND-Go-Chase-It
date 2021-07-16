@@ -9,7 +9,7 @@ and utilizes Gazebo plugins for the differential drive and the sensors.
 Two nodes are used to detect a white ball and to drive the robot around in order to chase the ball.
 
 
-# Key Concepts
+## Key Concepts
 Concepts explored in this project:
 * Gazebo model and building editor
 * Gazebo plugins
@@ -18,7 +18,7 @@ Concepts explored in this project:
 * ROS Publishers, Subscribers and Services
 * C++
 
-# Structure
+### Structure
 There are two packages in this project.
 * **my_robot**: This package holds the robot, the white ball and the Gazebo world.
 
@@ -29,10 +29,10 @@ There are two packages in this project.
 The directory structure is depicted below:
 
 
-# Technologies
+## Technologies
 Project is created with:
 
-# Installation
+## Installation
 To run this project, you must have ROS and Gazebo installed.
 
 To run this project, install it locally using:
@@ -40,5 +40,5 @@ To run this project, install it locally using:
 git clone https://github.com/elena-ecn/RoboticsND-Go-Chase-It.git
 ```
 
-# License
+## License
 The contents of this repository are covered under the [MIT License](LICENSE).
