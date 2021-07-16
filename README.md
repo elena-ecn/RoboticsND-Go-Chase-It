@@ -2,12 +2,12 @@
 This project involves designing a differential drive mobile robot which is able to detect and chase white-colored balls inside a custom Gazebo world.
 
 
-A mobile robot is designed with the Unified Robot Description Format (URDF). It employs two sensors: 
-* Hokuyo lidar 
-* camera
+The mobile robot is designed with the Unified Robot Description Format (URDF) and employs two sensors: 
+* Hokuyo Lidar 
+* Camera
 
-and utilizes Gazebo plugins for the differential drive and the sensors. 
-Two nodes are used to detect a white ball and to drive the robot around in order to chase the ball.
+Gazebo plugins are utilized for the differential drive and the sensors. 
+Two nodes are implemented to detect a white ball and to drive the robot around in order to chase the ball.
 
 
 ## Key Concepts
@@ -28,7 +28,36 @@ There are two packages in this project.
   * *process_image*: This client node subscribes to the robot's camera images and analyzes each image to determine the presence and position of a white ball. If a white ball exists in the image, the node will request a service via a client to drive the robot towards it.
 
 The directory structure is depicted below:
-
+```
+.RoboND-Go-Chase-It                # Go Chase It Project
+├── my_robot                       # my_robot package
+│   ├── launch                     # launch folder for launch files
+│   │   ├── robot_description.launch
+│   │   ├── world.launch
+│   │   ├── rvizconfig.rviz
+│   ├── meshes                     # meshes folder for sensors
+│   │   ├── hokuyo.dae
+│   ├── urdf                       # urdf folder for xarco files
+│   │   ├── my_robot.gazebo
+│   │   ├── my_robot.xacro
+│   ├── worlds                     # worlds folder for world files
+│   │   ├── myworld.world
+│   ├── CMakeLists.txt             # compiler instructions
+│   ├── package.xml                # package info
+├── ball_chaser                    # ball_chaser package
+│   ├── launch                     # launch folder for launch files
+│   │   ├── ball_chaser.launch
+│   ├── src                        # source folder for C++ scripts
+│   │   ├── drive_bot.cpp
+│   │   ├── process_images.cpp
+│   ├── srv                        # service folder for ROS services
+│   │   ├── DriveToTarget.srv
+│   ├── CMakeLists.txt             # compiler instructions
+│   ├── package.xml                # package info
+├── images                         # simulation gif
+│ 
+└──
+```
 
 ## Technologies
 Project is created with:
