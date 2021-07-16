@@ -1,24 +1,25 @@
-# Go-Chase-It
+# Go-Chase-It!
 This project involves designing a differential drive mobile robot which is able to detect and chase white-colored balls inside a custom Gazebo world.
 
 
 A mobile robot is designed with the Unified Robot Description Format (URDF). It employs two sensors: 
 * Hokuyo lidar 
 * camera
+
 and utilizes Gazebo plugins for the differential drive and the sensors. 
 Two nodes are used to detect a white ball and to drive the robot around in order to chase the ball.
 
 
 ## Key Concepts
 Concepts explored in this project:
-* Gazebo model and building editor
+* Gazebo models and building worlds
 * Gazebo plugins
 * URDF
 * Launch files
 * ROS Publishers, Subscribers and Services
 * C++
 
-### Structure
+## Structure
 There are two packages in this project.
 * **my_robot**: This package holds the robot, the white ball and the Gazebo world.
 
@@ -31,14 +32,49 @@ The directory structure is depicted below:
 
 ## Technologies
 Project is created with:
+* ROS Noetic
+* Gazebo 11.5.1
 
 ## Installation
 To run this project, you must have ROS and Gazebo installed.
 
-To run this project, install it locally using:
+#### Create a catkin_ws, if you do not already have one.
+```sh
+$ mkdir -p /catkin_ws/src/
+$ cd catkin_ws/src/
+$ catkin_init_workspace
 ```
-git clone https://github.com/elena-ecn/RoboticsND-Go-Chase-It.git
+
+#### Clone the project in catkin_ws/src/.
+```sh
+$ git clone https://github.com/elena-ecn/RoboticsND-Go-Chase-It.git
 ```
+
+#### Build the packages.
+```sh
+$ cd /catkin_ws/
+$ catkin_make
+```
+
+#### Source your environment.
+```sh
+$ source devel/setup.bash
+```
+
+#### Launch the simulation environment.
+```sh
+$ roslaunch my_robot world.launch
+```
+
+#### Launch the ball chaser.
+In a new terminal (Ctrl+Shift+T), type:
+```sh
+$ source devel/setup.bash
+$ roslaunch ball_chaser ball_chaser.launch
+```
+
+#### Play around! 
+Pick up the white ball and place in front of the robot. The robot will start chasing the ball!
 
 ## License
 The contents of this repository are covered under the [MIT License](LICENSE).
