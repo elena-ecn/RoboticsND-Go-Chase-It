@@ -1,4 +1,5 @@
 # Go-Chase-It!
+
 This project involves designing a differential drive mobile robot which is able to detect and chase white-colored balls inside a custom Gazebo world.
 
 <br>
@@ -60,7 +61,7 @@ The directory structure is depicted below:
 ```
 
 ## Technologies
-Project is created with:
+The project is created with:
 * ROS Noetic
 * Gazebo 11.5.1
 
