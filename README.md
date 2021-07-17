@@ -1,6 +1,9 @@
 # Go-Chase-It!
 This project involves designing a differential drive mobile robot which is able to detect and chase white-colored balls inside a custom Gazebo world.
 
+<br>
+
+![Robot chasing ball](images/chaseIt.gif)
 
 The mobile robot is designed with the Unified Robot Description Format (URDF) and employs two sensors: 
 * Hokuyo Lidar 
@@ -8,7 +11,6 @@ The mobile robot is designed with the Unified Robot Description Format (URDF) an
 
 Gazebo plugins are utilized for the differential drive and the sensors. 
 Two nodes are implemented to detect a white ball and to drive the robot around in order to chase the ball.
-
 
 ## Key Concepts
 Concepts explored in this project:
@@ -55,8 +57,6 @@ The directory structure is depicted below:
 │   ├── CMakeLists.txt             # compiler instructions
 │   ├── package.xml                # package info
 ├── images                         # simulation gif
-│ 
-└──
 ```
 
 ## Technologies
@@ -104,6 +104,10 @@ $ roslaunch ball_chaser ball_chaser.launch
 
 #### Play around! 
 Pick up the white ball and place in front of the robot. The robot will start chasing the ball!
+
+<br>
+
+![Simulation environment](images/sim_environment.png)
 
 ## License
 The contents of this repository are covered under the [MIT License](LICENSE).
