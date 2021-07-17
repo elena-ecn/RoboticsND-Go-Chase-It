@@ -58,6 +58,8 @@ The directory structure is depicted below:
 │   ├── CMakeLists.txt             # compiler instructions
 │   ├── package.xml                # package info
 ├── images                         # simulation gif
+│   ├── chaseIt.gif
+│   ├── sim_environment.png
 ```
 
 ## Technologies
