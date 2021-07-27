@@ -7,7 +7,7 @@ This project involves designing a differential drive mobile robot which is able 
 ![Robot chasing ball](images/chaseIt.gif)
 
 The mobile robot is designed with the Unified Robot Description Format (URDF) and employs two sensors: 
-* Hokuyo Lidar 
+* LiDAR 
 * Camera
 
 Gazebo plugins are utilized for the differential drive and the sensors. 
@@ -106,7 +106,7 @@ $ roslaunch ball_chaser ball_chaser.launch
 ```
 
 #### Play around! 
-Pick up the white ball and place in front of the robot. The robot will start chasing the ball!
+Pick up the white ball and place it in front of the robot. The robot will start chasing the ball!
 
 <br>
 
